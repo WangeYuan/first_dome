@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .img{
+            width: 55px;
+            height: 55px;
+            background: url('./素材/image/bg1.png')-75px 0px;
+            margin-bottom: 10px;
+        }
+        .img1{
+            height: 55px;
+            width: 19px;
+            margin-left: 19px;
+            background: url('./素材/image/bg1.png')-223px 3px;
+        }
+        .img2{
+            height: 55px;
+            width: 23px;
+            margin-left: 19px;
+            background: url('./素材/image/bg1.png')-243px 3px;
+        }
+        .img3{
+            height: 55px;
+            width: 23px;
+            margin-left: 19px;
+            background: url('./素材/image/bg1.png')-200px 3px;
+        }
+        .img4{
+            height: 55px;
+            width: 19px;
+            margin-left: 19px;
+            background: url('./素材/image/bg1.png')-177px 3px;
+        }
+        .img{
+            position: absolute;
+            top: 85%;
+            right: 5%;
+        }
+        
+        .menu{
+            position: absolute;
+            right: 5px;
+            top: 555px;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+            <div class="img a1">
+                    <div class="img1"></div>
+            </div>
+            <div class="img a2">
+                    <div class="img2"></div>
+            </div>
+            <div class="img a3">
+                    <div class="img3"></div>
+            </div>
+            <div class="img a4">
+                    <div class="img4"></div>
+            </div>
+
+
+            <div class="menu">
+                    <img src="./素材/image/menu.png" alt="" width="80px" height="80px">
+            </div>
+    </div>
+
+
+
+
+
+
+    <script src="./zepto.min.js"></script>
+    <script src="./fx.js"></script>
+    <script src="./zepto.touch.js"></script>
+    <script>
+        $('.menu').tap(function(){
+        if(!$('.img').hasClass('b1')){
+            // console.log(!$('.img').hasClass('b1'))
+            $('.img').addClass('b1')
+            $('.a1').animate({
+                translateX:'-100px',
+                translateY:'-100px'
+            },500,'ease'),
+            $('.a2').animate({
+                translateX:'-45px',
+                translateY:'-155px'
+            },500,'ease'),
+            $('.a3').animate({
+                translateX:'-150px',
+                translateY:'-50px'
+            },500,'ease'),
+            $('.a4').animate({
+                translateX:'-170px',
+                translateY:'10px'
+            },500,'ease')
+        }
+        else{
+            $('.img').removeClass('b1')
+            $('.a1').animate({
+                translateX:'0',
+                translateY:'0'
+            },500,'ease'),
+            $('.a2').animate({
+                translateX:'0',
+                translateY:'0'
+            },500,'ease'),
+            $('.a3').animate({
+                translateX:'0',
+                translateY:'0'
+            },500,'ease'),
+            $('.a4').animate({
+                translateX:'0',
+                translateY:'0'
+            },500,'ease')
+        }
+        })
+    </script>
+</body>
+</html>
